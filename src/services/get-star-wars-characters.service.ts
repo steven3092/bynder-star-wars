@@ -1,4 +1,4 @@
-export async function fetchStarWarsCharacter() {
+export async function fetchStarWarsCharacters() {
   const response = await fetch("https://swapi.dev/api/people");
   const data = await response.json();
 
