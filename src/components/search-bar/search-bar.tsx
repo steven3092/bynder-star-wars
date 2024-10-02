@@ -11,18 +11,15 @@ export const SearchBar = ({
   });
 
   return (
-    <div className="search-bar">
-      <div style={{ width: "100%" }}>
-        <div className="search-bar-sub-components">
-          <input
-            type="text"
-            placeholder="Search characters"
-            value={searchQuery}
-            onChange={handleSearchChange}
-            name="search-characters"
-          />
-        </div>
-      </div>
-    </div>
+    <>
+      <input
+        className="border border-gray-300 rounded-lg mx-4 my-4 py-4 px-4 pr-10 text-white focus:ring-blue-500"
+        type="text"
+        placeholder="Search characters"
+        value={searchQuery}
+        onChange={handleSearchChange}
+        name="search-characters"
+      />
+    </>
   );
 };
