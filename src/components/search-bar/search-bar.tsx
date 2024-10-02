@@ -6,7 +6,7 @@ export const SearchBar = ({
 }: {
   handleOnCharacterSearch: (search: string) => void;
 }) => {
-  const { searchQuery, handleSearchChange, handleSearchClick } = useSearchBar({
+  const { searchQuery, handleSearchChange } = useSearchBar({
     handleOnCharacterSearch,
   });
 
@@ -21,14 +21,6 @@ export const SearchBar = ({
             onChange={handleSearchChange}
             name="search-characters"
           />
-          <button
-            type="button"
-            name="Search"
-            className="search-bar-button"
-            onClick={handleSearchClick}
-          >
-            Search
-          </button>
         </div>
       </div>
     </div>

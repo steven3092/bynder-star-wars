@@ -13,10 +13,7 @@ export const useCharacters = () => {
   //   };
 
   const handleSearchCharacter = (search: string) => {
-    dispatch({
-      type: "SEARCH_CHARACTER",
-      search: search,
-    });
+    dispatch({ type: "SEARCH_CHARACTER", search: search });
   };
 
   //   const handleDeleteCharacter = (id: number) => {

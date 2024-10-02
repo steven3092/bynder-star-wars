@@ -9,15 +9,11 @@ export const useSearchBar = ({
 
   const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
-  };
-
-  const handleSearchClick = () => {
-    handleOnCharacterSearch(searchQuery);
+    handleOnCharacterSearch(e.target.value);
   };
 
   return {
     handleSearchChange,
-    handleSearchClick,
     searchQuery,
   };
 };
