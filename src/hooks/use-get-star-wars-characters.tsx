@@ -1,11 +1,11 @@
 import { useQuery } from "@tanstack/react-query";
-import { fetchStarWarsCharacter } from "../services/get-star-wars-characters.service";
 import { CharactersDTO } from "../interfaces/characters.dto";
+import { fetchStarWarsCharacters } from "../services/get-star-wars-characters.service";
 
 export function useGetStarWarsCharacters() {
   const query = useQuery({
     queryKey: ["get-star-wars-characters"],
-    queryFn: () => fetchStarWarsCharacter(),
+    queryFn: () => fetchStarWarsCharacters(),
     retry: 0,
   });
 
