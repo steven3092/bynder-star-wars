@@ -2,18 +2,21 @@ import { useState } from "react";
 import "./App.css";
 import { SearchBar } from "./components/search-bar/search-bar";
 import { useCharacters } from "./hooks/use-characters/use-characters";
-import { useGetStarWarsCharacters } from "./hooks/use-get-star-wars-characters";
+import { useNavigate } from "react-router-dom";
 
 function App() {
   const [ascSort, setAscSort] = useState<boolean>(true);
-  const { characters } = useGetStarWarsCharacters();
+  const navigate = useNavigate();
+  const handleCharacterClick = (id: number) => {
+    navigate(`/character/${id}`);
+  };
 
   const {
     // handleAddCharacter,
     // handleUpdateCharacter,
     handleSearchCharacter,
     // handleDeleteCharacter,
-    handleAllCharacters,
+    // handleAllCharacters,
     handleSortCharacters,
     handleInvertSortCharacters,
     // handleResetCharacters,
@@ -35,18 +38,14 @@ function App() {
   return (
     <>
       <SearchBar handleOnCharacterSearch={handleSearchCharacter} />
-      <button type="button" onClick={() => handleAllCharacters(characters)}>
-        Reset
-      </button>
       <button type="button" onClick={handleSort}>
         {ascSort ? "Sort ↑" : "Sort ↓"}
       </button>
-      {/* <button type="button" onClick={() => handleInvertSortCharacters()}>
-        Sort ↓
-      </button> */}
       {state &&
         state.map((character, index) => (
-          <div key={index}>{character.name}</div>
+          <button key={index} onClick={() => handleCharacterClick(index + 1)}>
+            {character.name}
+          </button>
         ))}
     </>
   );
