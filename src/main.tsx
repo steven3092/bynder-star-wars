@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "character/:characterId",
+    path: "character/:characterId/planet/:planetId",
     element: <Character />,
     errorElement: <ErrorPage />,
   },
