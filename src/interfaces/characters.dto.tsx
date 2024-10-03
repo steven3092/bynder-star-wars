@@ -9,6 +9,7 @@ export interface CharactersDTO {
   readonly height: string;
   readonly mass: string;
   readonly name: string;
+  readonly homeworld: string;
   readonly skin_color: string;
   readonly species: string;
   readonly starships: string[];
