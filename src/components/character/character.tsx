@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useGetStarWarsCharacter } from "../../hooks/use-get-star-wars-character";
 import { useGetStarWarsPlanet } from "../../hooks/use-get-star-wars-planet";
 import { GenericCharacter } from "../generic-character/generic-character";

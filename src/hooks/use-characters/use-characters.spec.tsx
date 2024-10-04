@@ -1,5 +1,5 @@
 import { renderHook, act } from "@testing-library/react";
-import { vi, vitest } from "vitest";
+import { vitest } from "vitest";
 import { CharactersDTO } from "../../interfaces/characters.dto";
 import { useCharacters } from "./use-characters";
 
