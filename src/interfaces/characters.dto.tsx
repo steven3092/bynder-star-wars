@@ -11,7 +11,7 @@ export interface CharactersDTO {
   readonly name: string;
   readonly homeworld: string;
   readonly skin_color: string;
-  readonly species: string;
+  readonly species: string[];
   readonly starships: string[];
   readonly url: string;
   readonly vehicles: string[];
