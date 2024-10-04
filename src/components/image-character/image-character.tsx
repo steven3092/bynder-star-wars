@@ -17,7 +17,7 @@ export const ImageCharacter = ({ character }: { character: CharactersDTO }) => {
           <img
             src={lukeSkywalker}
             alt="luke skywalker"
-            className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
+            className="w-64 h-80 rounded-lg object-cover mb-6"
           />
         </div>
       )}
@@ -26,7 +26,7 @@ export const ImageCharacter = ({ character }: { character: CharactersDTO }) => {
           <img
             src={princessLeia}
             alt="leia organa"
-            className="w-64 h-90 rounded-lg object-cover mr-6 mb-6"
+            className="w-64 h-90 rounded-lg object-cover mb-6"
           />
         </div>
       )}
@@ -35,7 +35,7 @@ export const ImageCharacter = ({ character }: { character: CharactersDTO }) => {
           <img
             src={c3po}
             alt="C-3PO"
-            className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
+            className="w-64 h-80 rounded-lg object-cover mb-6"
           />
         </div>
       )}
@@ -44,7 +44,7 @@ export const ImageCharacter = ({ character }: { character: CharactersDTO }) => {
           <img
             src={r2d2}
             alt="R2-D2"
-            className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
+            className="w-64 h-80 rounded-lg object-cover mb-6"
           />
         </div>
       )}
@@ -53,7 +53,7 @@ export const ImageCharacter = ({ character }: { character: CharactersDTO }) => {
           <img
             src={r5d4}
             alt="R5-D4"
-            className="w-64 h-90 rounded-lg object-cover mr-6 mb-6"
+            className="w-64 h-90 rounded-lg object-cover mb-6"
           />
         </div>
       )}
@@ -62,7 +62,7 @@ export const ImageCharacter = ({ character }: { character: CharactersDTO }) => {
           <img
             src={darthVader}
             alt="darth vader"
-            className="w-64 h-90 rounded-lg object-cover mr-6 mb-6"
+            className="w-64 h-90 rounded-lg object-cover mb-6"
           />
         </div>
       )}
@@ -71,7 +71,7 @@ export const ImageCharacter = ({ character }: { character: CharactersDTO }) => {
           <img
             src={owenLars}
             alt="owen lars"
-            className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
+            className="w-64 h-80 rounded-lg object-cover mb-6"
           />
         </div>
       )}
@@ -80,7 +80,7 @@ export const ImageCharacter = ({ character }: { character: CharactersDTO }) => {
           <img
             src={obiWan}
             alt="obi-wan kenobi"
-            className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
+            className="w-64 h-80 rounded-lg object-cover mb-6"
           />
         </div>
       )}
@@ -96,7 +96,7 @@ export const ImageCharacter = ({ character }: { character: CharactersDTO }) => {
             <img
               src={noIdea}
               alt="no idea"
-              className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
+              className="w-64 h-80 rounded-lg object-cover mb-6"
             />
           </div>
         )}
