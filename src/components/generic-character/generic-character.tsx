@@ -19,8 +19,12 @@ export const GenericCharacter = ({
 
   return (
     <>
-      <button className="p-6" type="button" onClick={() => navigate("/")}>
-        Return home page
+      <button
+        className="p-6 cursor-pointer"
+        type="button"
+        onClick={() => navigate("/")}
+      >
+        <img src="../../../src/assets/back-arrow.svg" alt="back-arrow" />
       </button>
       <div className="flex flex-col my-16 md:flex-row items-center p-6">
         <ImageCharacter character={character} />
