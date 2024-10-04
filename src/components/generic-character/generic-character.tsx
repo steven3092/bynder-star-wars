@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { CharactersDTO } from "../../interfaces/characters.dto";
 import { PlanetDTO } from "../../interfaces/planet.dto";
 import { ImageCharacter } from "../image-character/image-character";
+import backArrow from "../../../src/assets/back-arrow.svg";
 
 export const GenericCharacter = ({
   handleOnClickGenericCharacter,
@@ -24,7 +25,7 @@ export const GenericCharacter = ({
         type="button"
         onClick={() => navigate("/")}
       >
-        <img src="../../../src/assets/back-arrow.svg" alt="back-arrow" />
+        <img src={backArrow} alt="back-arrow" />
       </button>
       <div className="flex flex-col my-16 md:flex-row items-center p-6">
         <ImageCharacter character={character} />
