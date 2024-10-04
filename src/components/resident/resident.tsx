@@ -1,21 +1,21 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useGetStarWarsCharacter } from "../../hooks/use-get-star-wars-character";
 import { useGetStarWarsPlanet } from "../../hooks/use-get-star-wars-planet";
 import { GenericCharacter } from "../generic-character/generic-character";
-import { useCharacter } from "./hooks/use-character";
+import { useCharacterList } from "../characters-list/hooks/use-characters-list";
 
-export const Character = () => {
-  const { characterId, planetId } = useParams();
-  const { character } = useGetStarWarsCharacter(characterId);
+export const Resident = () => {
+  const { residentId, planetId } = useParams();
+  const { character } = useGetStarWarsCharacter(residentId);
   const { planet } = useGetStarWarsPlanet(planetId);
-  const { handleOnClickNavigateToResident } = useCharacter();
+  const { handleOnClickNavigateToCharacter } = useCharacterList();
 
   return (
     <>
       <GenericCharacter
         character={character}
         planet={planet}
-        handleOnClickGenericCharacter={handleOnClickNavigateToResident}
+        handleOnClickGenericCharacter={handleOnClickNavigateToCharacter}
       />
     </>
   );
