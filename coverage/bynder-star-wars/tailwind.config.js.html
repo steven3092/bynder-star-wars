@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/main.tsx</title>
+    <title>Code coverage report for bynder-star-wars/tailwind.config.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">src</a> main.tsx</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">bynder-star-wars</a> tailwind.config.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/13</span>
+                <span class='fraction'>0/12</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/13</span>
+                <span class='fraction'>0/12</span>
             </div>
         
             
@@ -75,17 +75,7 @@
 <a name='L10'></a><a href='#L10'>10</a>
 <a name='L11'></a><a href='#L11'>11</a>
 <a name='L12'></a><a href='#L12'>12</a>
-<a name='L13'></a><a href='#L13'>13</a>
-<a name='L14'></a><a href='#L14'>14</a>
-<a name='L15'></a><a href='#L15'>15</a>
-<a name='L16'></a><a href='#L16'>16</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L13'></a><a href='#L13'>13</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -93,21 +83,22 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import { StrictMode } from "react";<span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ></span></span></span>
-<span class="cstat-no" title="statement not covered" >import { createRoot } from "react-dom/client";</span>
-<span class="cstat-no" title="statement not covered" >import App from "./App.tsx";</span>
-<span class="cstat-no" title="statement not covered" >import { QueryClient, QueryClientProvider } from "@tanstack/react-query";</span>
-<span class="cstat-no" title="statement not covered" >import "./index.css";</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >const queryClient = new QueryClient();</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >createRoot(document.getElementById("root")!).render(</span>
-<span class="cstat-no" title="statement not covered" >  &lt;StrictMode&gt;</span>
-<span class="cstat-no" title="statement not covered" >    &lt;QueryClientProvider client={queryClient}&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;App /&gt;</span>
-<span class="cstat-no" title="statement not covered" >    &lt;/QueryClientProvider&gt;</span>
-<span class="cstat-no" title="statement not covered" >  &lt;/StrictMode&gt;</span>
-<span class="cstat-no" title="statement not covered" >);</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >/** @type {import('tailwindcss').Config} */</span></span></span>
+<span class="cstat-no" title="statement not covered" >export default {</span>
+<span class="cstat-no" title="statement not covered" >  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],</span>
+<span class="cstat-no" title="statement not covered" >  theme: {</span>
+<span class="cstat-no" title="statement not covered" >    extend: {</span>
+<span class="cstat-no" title="statement not covered" >      colors: {</span>
+<span class="cstat-no" title="statement not covered" >        "custom-blue": "#646cff",</span>
+<span class="cstat-no" title="statement not covered" >      },</span>
+<span class="cstat-no" title="statement not covered" >    },</span>
+<span class="cstat-no" title="statement not covered" >  },</span>
+<span class="cstat-no" title="statement not covered" >  plugins: [],</span>
+<span class="cstat-no" title="statement not covered" >};</span>
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -115,7 +106,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-10-01T15:59:23.828Z
+                at 2024-10-04T10:22:10.067Z
             </div>
         <script src="../prettify.js"></script>
         <script>
