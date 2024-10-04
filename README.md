@@ -1,50 +1,52 @@
-# React + TypeScript + Vite
+# Bynder Star Wars
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Available here : 
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+Is an app you can see some characters from Star Wars.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+You can sort the characters and filter them with the search bar.
 
-- Configure the top-level `parserOptions` property like this:
+You can perform a click on a character to get to his detail page.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+In the detail page you can see the resident from the planet the character is and
+click it to navigate to the detail page from this resident.
+
+Enjoy !
+
+# The project
+
+To run the project in developement you have to run
+
+```bash
+npm install
+```
+The first time
+
+and then 
+
+```bash
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+# The tests
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+To run the test you have to run
+
+```bash
+npm run test
 ```
+
+Here I use Vitest to simulate the DOM because it works more easily with Vite than Jest.
+
+To run the test coverages
+
+```bash
+npm run coverage
+```
+
+You will see a folder coverage appearing in the root bynder-star-wars folder.
+
+
