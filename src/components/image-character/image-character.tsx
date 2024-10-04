@@ -5,56 +5,56 @@ export const ImageCharacter = ({ character }: { character: CharactersDTO }) => {
     <>
       {character?.name === "Luke Skywalker" && (
         <img
-          src="../../../../public/assets/Luke Skywalker.png"
+          src="../../../src/assets/Luke_Skywalker.svg"
           alt="luke skywalker"
           className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
         />
       )}
       {character?.name === "Leia Organa" && (
         <img
-          src="../../../../public/assets/Princess Leia.png"
+          src="../../../src/assets/Princess Leia.png"
           alt="leia organa"
           className="w-64 h-90 rounded-lg object-cover mr-6 mb-6"
         />
       )}
       {character?.name === "C-3PO" && (
         <img
-          src="../../../../public/assets/C-3PO.png"
+          src="../../../src/assets/C-3PO.png"
           alt="C-3PO"
           className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
         />
       )}
       {character?.name === "R2-D2" && (
         <img
-          src="../../../../public/assets/R2-D2.png"
+          src="../../../src/assets/R2-D2.png"
           alt="R2-D2"
           className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
         />
       )}
       {character?.name === "R5-D4" && (
         <img
-          src="../../../../public/assets/R5-D4.png"
+          src="../../../src/assets/R5-D4.png"
           alt="R5-D4"
           className="w-64 h-90 rounded-lg object-cover mr-6 mb-6"
         />
       )}
       {character?.name === "Darth Vader" && (
         <img
-          src="../../../../public/assets/Darth Vader.png"
+          src="../../../src/assets/Darth Vader.png"
           alt="darth vader"
           className="w-64 h-90 rounded-lg object-cover mr-6 mb-6"
         />
       )}
       {character?.name === "Owen Lars" && (
         <img
-          src="../../../../public/assets/Owen Lars.png"
+          src="../../../src/assets/Owen Lars.png"
           alt="owen lars"
           className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
         />
       )}
       {character?.name === "Obi-Wan Kenobi" && (
         <img
-          src="../../../../public/assets/Obi-Wan.png"
+          src="../../../src/assets/Obi-Wan.png"
           alt="obi-wan kenobi"
           className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
         />
@@ -68,7 +68,7 @@ export const ImageCharacter = ({ character }: { character: CharactersDTO }) => {
         character?.name !== "Luke Skywalker" &&
         character?.name !== "C-3PO" && (
           <img
-            src="../../../../public/assets/no_idea.png"
+            src="../../../src/assets/no_idea.png"
             alt="no idea"
             className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
           />
