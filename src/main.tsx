@@ -27,10 +27,22 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
 ]);
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
-    </QueryClientProvider>
-  </StrictMode>
-);
+
+async function enableMocking() {
+  if (import.meta.env.VITE_USE_MOCKS_SERVICE_WORKER === "false") {
+    return;
+  }
+  const { worker } = await import("./mocks/browser");
+
+  return worker.start();
+}
+
+enableMocking().then(() => {
+  createRoot(document.getElementById("root")!).render(
+    <StrictMode>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
+    </StrictMode>
+  );
+});
