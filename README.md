@@ -1,6 +1,6 @@
 # Bynder Star Wars
 
-Available here : 
+Available here : https://67000e78f77d7b61eb16427c--bynder-star-wars.netlify.app/
 
 
 
