@@ -13,60 +13,76 @@ export const ImageCharacter = ({ character }: { character: CharactersDTO }) => {
   return (
     <>
       {character?.name === "Luke Skywalker" && (
-        <img
-          src={lukeSkywalker}
-          alt="luke skywalker"
-          className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
-        />
+        <div className="flex justify-center">
+          <img
+            src={lukeSkywalker}
+            alt="luke skywalker"
+            className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
+          />
+        </div>
       )}
       {character?.name === "Leia Organa" && (
-        <img
-          src={princessLeia}
-          alt="leia organa"
-          className="w-64 h-90 rounded-lg object-cover mr-6 mb-6"
-        />
+        <div className="flex justify-center">
+          <img
+            src={princessLeia}
+            alt="leia organa"
+            className="w-64 h-90 rounded-lg object-cover mr-6 mb-6"
+          />
+        </div>
       )}
       {character?.name === "C-3PO" && (
-        <img
-          src={c3po}
-          alt="C-3PO"
-          className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
-        />
+        <div className="flex justify-center">
+          <img
+            src={c3po}
+            alt="C-3PO"
+            className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
+          />
+        </div>
       )}
       {character?.name === "R2-D2" && (
-        <img
-          src={r2d2}
-          alt="R2-D2"
-          className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
-        />
+        <div className="flex justify-center">
+          <img
+            src={r2d2}
+            alt="R2-D2"
+            className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
+          />
+        </div>
       )}
       {character?.name === "R5-D4" && (
-        <img
-          src={r5d4}
-          alt="R5-D4"
-          className="w-64 h-90 rounded-lg object-cover mr-6 mb-6"
-        />
+        <div className="flex justify-center">
+          <img
+            src={r5d4}
+            alt="R5-D4"
+            className="w-64 h-90 rounded-lg object-cover mr-6 mb-6"
+          />
+        </div>
       )}
       {character?.name === "Darth Vader" && (
-        <img
-          src={darthVader}
-          alt="darth vader"
-          className="w-64 h-90 rounded-lg object-cover mr-6 mb-6"
-        />
+        <div className="flex justify-center">
+          <img
+            src={darthVader}
+            alt="darth vader"
+            className="w-64 h-90 rounded-lg object-cover mr-6 mb-6"
+          />
+        </div>
       )}
       {character?.name === "Owen Lars" && (
-        <img
-          src={owenLars}
-          alt="owen lars"
-          className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
-        />
+        <div className="flex justify-center">
+          <img
+            src={owenLars}
+            alt="owen lars"
+            className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
+          />
+        </div>
       )}
       {character?.name === "Obi-Wan Kenobi" && (
-        <img
-          src={obiWan}
-          alt="obi-wan kenobi"
-          className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
-        />
+        <div className="flex justify-center">
+          <img
+            src={obiWan}
+            alt="obi-wan kenobi"
+            className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
+          />
+        </div>
       )}
       {character?.name !== "Obi-Wan Kenobi" &&
         character?.name !== "Owen Lars" &&
@@ -76,11 +92,13 @@ export const ImageCharacter = ({ character }: { character: CharactersDTO }) => {
         character?.name !== "Leia Organa" &&
         character?.name !== "Luke Skywalker" &&
         character?.name !== "C-3PO" && (
-          <img
-            src={noIdea}
-            alt="no idea"
-            className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
-          />
+          <div className="flex justify-center">
+            <img
+              src={noIdea}
+              alt="no idea"
+              className="w-64 h-80 rounded-lg object-cover mr-6 mb-6"
+            />
+          </div>
         )}
     </>
   );
