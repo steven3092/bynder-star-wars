@@ -33,7 +33,7 @@ function App() {
       <h1 className="text-xl font-bold mt-16 flex items-center justify-center">
         Star Wars Chracters
       </h1>
-      <div className="sticky top-0 flex flex-col items-center justify-center mb-16 sm:flex-row">
+      <div className="flex flex-col items-center justify-center mb-16 sm:flex-row">
         <SearchBar handleOnCharacterSearch={handleSearchCharacter} />
         <button
           type="button"
