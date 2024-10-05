@@ -2,7 +2,9 @@
 
 Available here : https://bynder-star-wars.netlify.app
 
+
 <img width="1728" alt="Capture d’écran 2024-10-05 à 15 41 38" src="https://github.com/user-attachments/assets/c3658b1c-9349-4695-9a97-97d5769d38c3">
+
 
 Is an app you can see some characters from Star Wars.
 
@@ -59,6 +61,10 @@ In the .env.development file you can activate or deactivate MSW (Mock Service Wo
 VITE_USE_MOCKS_SERVICE_WORKER=false/true
 ```
 If you decide to activate MSW the API calls made to swapi will be mocked, it means that you can be offline you'll still get data that are stored in the project itself (locally only).
+
 MSW should be used only during tests or development phase, it doesn't make sense to have it activated in production.
+
 You can see that when you reach the URL above MSW is activated in the console, it's because when I build the app, the build provides the mockServiceWorker.js file it shouldn't be the case for production, but here is ok for this small demo app.
+
+Moreover MSW should work properly in the following browsers : Chrome, Firefox, Opera. For the rest is possible that it doesn't mock properly I got this issue with Arc for example.
 
