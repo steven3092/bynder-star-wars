@@ -57,15 +57,6 @@ export const GenericCharacter = ({
               <p>
                 <strong>Skin Color:</strong> {character?.skin_color}
               </p>
-              <p>
-                <strong>Starships:</strong> {character?.starships.join(", ")}
-              </p>
-              <p>
-                <strong>Species:</strong> {character?.species}
-              </p>
-              <p>
-                <strong>Vehicles:</strong> {character?.vehicles.join(", ")}
-              </p>
             </div>
 
             <div className="mx-8">
