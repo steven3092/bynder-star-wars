@@ -6,11 +6,10 @@ type UseCharactersReducerAction =
   | { type: "INITIALIZE"; characters: CharactersDTO[] }
   | { type: "SEARCH_CHARACTER"; search: string }
   | { type: "SORT_CHARACTERS" }
-  | { type: "INVERT_SORT_CHARACTERS" }
-  | { type: "FILTER_CHARACTERS"; name: string };
+  | { type: "INVERT_SORT_CHARACTERS" };
 
 export const useCharactersReducer = () => {
-  const { characters } = useGetStarWarsCharacters();
+  const { characters, isLoading } = useGetStarWarsCharacters();
 
   const charactersReducer = (
     state: CharactersDTO[],
@@ -38,8 +37,6 @@ export const useCharactersReducer = () => {
         return state.sort((characterA, characterB) =>
           characterB.name.localeCompare(characterA.name)
         );
-      case "FILTER_CHARACTERS":
-        return state.filter((character) => character.name === action.name);
       default:
         return state;
     }
@@ -56,5 +53,6 @@ export const useCharactersReducer = () => {
   return {
     state,
     dispatch,
+    isLoading,
   };
 };
