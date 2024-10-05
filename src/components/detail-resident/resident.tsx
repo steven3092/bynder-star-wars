@@ -5,7 +5,7 @@ import { GenericCharacter } from "../generic-character/generic-character";
 import { useCharacterList } from "../characters-list/hooks/use-characters-list";
 import { Loader } from "../loader/loader";
 
-export const Resident = () => {
+export const ResidentDetails = () => {
   const { residentId, planetId } = useParams();
   const { character } = useGetStarWarsCharacter(residentId);
   const { planet, isLoading } = useGetStarWarsPlanet(planetId);

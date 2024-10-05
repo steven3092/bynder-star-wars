@@ -2,8 +2,8 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Character } from "./components/character/character.tsx";
-import { Resident } from "./components/resident/resident.tsx";
+import { CharacterDetails } from "./components/detail-character/character.tsx";
+import { ResidentDetails } from "./components/detail-resident/resident.tsx";
 import ErrorPage from "./components/error-page.tsx";
 import App from "./App.tsx";
 import "./index.css";
@@ -18,12 +18,12 @@ const router = createBrowserRouter([
   },
   {
     path: "character/:characterId/planet/:planetId",
-    element: <Character />,
+    element: <CharacterDetails />,
     errorElement: <ErrorPage />,
   },
   {
     path: "resident/:residentId/planet/:planetId",
-    element: <Resident />,
+    element: <ResidentDetails />,
     errorElement: <ErrorPage />,
   },
 ]);
