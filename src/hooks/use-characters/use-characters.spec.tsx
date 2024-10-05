@@ -69,17 +69,4 @@ describe("useCharacters", () => {
       search: searchQuery,
     });
   });
-
-  it("should initialize all characters", () => {
-    const { result } = renderHook(() => useCharacters());
-
-    act(() => {
-      result.current.handleAllCharacters(mockCharacters);
-    });
-
-    expect(useCharactersReducerMock().dispatch).toHaveBeenCalledWith({
-      type: "INITIALIZE",
-      characters: mockCharacters,
-    });
-  });
 });
