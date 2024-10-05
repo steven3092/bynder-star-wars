@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { CharacterDetails } from "./components/detail-character/character.tsx";
 import { ResidentDetails } from "./components/detail-resident/resident.tsx";
-import ErrorPage from "./components/error-page.tsx";
+import ErrorPage from "./components/error-page/error-page.tsx";
 import App from "./App.tsx";
 import "./index.css";
 
