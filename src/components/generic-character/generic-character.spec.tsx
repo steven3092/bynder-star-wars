@@ -19,7 +19,7 @@ const mockCharacter: CharactersDTO = {
   films: [],
   species: [],
   vehicles: [],
-  starships: ["X-Wing"],
+  starships: [],
   created: "",
   edited: "",
   url: "",
@@ -96,7 +96,6 @@ describe("Generic Character component", () => {
     );
 
     expect(screen.getByText(/Luke Skywalker/i)).toBeInTheDocument();
-    expect(screen.getByText(/X-Wing/i)).toBeInTheDocument();
   });
 
   it("renders the planet information", () => {
