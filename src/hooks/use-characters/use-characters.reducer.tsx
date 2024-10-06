@@ -20,9 +20,7 @@ export const useCharactersReducer = () => {
         return action.characters;
       case "SEARCH_CHARACTER":
         return characters.filter((character) =>
-          Object.values(character).some((value) =>
-            value.toString().toLowerCase().includes(action.search.toLowerCase())
-          )
+          character.name.toLowerCase().includes(action.search.toLowerCase())
         );
       case "SORT_CHARACTERS":
         return action.sort
