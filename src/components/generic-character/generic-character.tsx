@@ -78,7 +78,7 @@ export const GenericCharacter = ({
                           character.homeworld
                         )
                       }
-                      className="text-white p-1 px-4 my-1 bg-gray-400 rounded-lg shadow-md hover:bg-gray-700 transition-colors"
+                      className="text-white p-1 px-4 my-1 bg-custom-blue rounded-lg shadow-md hover:bg-gray-700 transition-colors"
                     >
                       Resident {index + 1}
                     </button>
