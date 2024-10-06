@@ -5,7 +5,7 @@ import { CharactersDTO } from "../../interfaces/characters.dto";
 type UseCharactersReducerAction =
   | { type: "INITIALIZE"; characters: CharactersDTO[] }
   | { type: "SEARCH_CHARACTER"; search: string }
-  | { type: "SORT_CHARACTERS" }
+  | { type: "SORT_CHARACTERS"; sort: boolean }
   | { type: "INVERT_SORT_CHARACTERS" };
 
 export const useCharactersReducer = () => {
@@ -30,13 +30,13 @@ export const useCharactersReducer = () => {
             )
           : characters;
       case "SORT_CHARACTERS":
-        return state.sort((characterA, characterB) =>
-          characterA.name.localeCompare(characterB.name)
-        );
-      case "INVERT_SORT_CHARACTERS":
-        return state.sort((characterA, characterB) =>
-          characterB.name.localeCompare(characterA.name)
-        );
+        return action.sort
+          ? [...state].sort((characterA, characterB) =>
+              characterA.name.localeCompare(characterB.name)
+            )
+          : [...state].sort((characterA, characterB) =>
+              characterB.name.localeCompare(characterA.name)
+            );
       default:
         return state;
     }

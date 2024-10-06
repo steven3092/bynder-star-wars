@@ -7,18 +7,13 @@ export const useCharacters = () => {
     dispatch({ type: "SEARCH_CHARACTER", search: search });
   };
 
-  const handleSortCharacters = () => {
-    dispatch({ type: "SORT_CHARACTERS" });
-  };
-
-  const handleInvertSortCharacters = () => {
-    dispatch({ type: "INVERT_SORT_CHARACTERS" });
+  const handleSortCharacters = (sort: boolean) => {
+    dispatch({ type: "SORT_CHARACTERS", sort: sort });
   };
 
   return {
     handleSearchCharacter,
     handleSortCharacters,
-    handleInvertSortCharacters,
     state,
     isLoading,
   };
