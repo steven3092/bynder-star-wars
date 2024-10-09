@@ -3,6 +3,7 @@ import { CharactersDTO } from "../../interfaces/characters.dto";
 import { PlanetDTO } from "../../interfaces/planet.dto";
 import { ImageCharacter } from "../image-character/image-character";
 import backArrow from "../../../src/assets/back-arrow.svg";
+import { useQueryClient } from "@tanstack/react-query";
 
 export const GenericCharacter = ({
   handleOnClickGenericCharacter,
@@ -17,13 +18,17 @@ export const GenericCharacter = ({
   planet: PlanetDTO;
 }) => {
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
 
   return (
     <>
       <button
         className="p-6 cursor-pointer"
         type="button"
-        onClick={() => navigate("/")}
+        onClick={() => {
+          queryClient.removeQueries();
+          navigate("/");
+        }}
       >
         <img src={backArrow} alt="back-arrow" />
       </button>
