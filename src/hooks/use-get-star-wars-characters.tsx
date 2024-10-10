@@ -9,7 +9,7 @@ export function useGetStarWarsCharacters() {
     retry: 0,
   });
 
-  const characters: CharactersDTO[] = query.data;
+  const characters: CharactersDTO[] | undefined = query.data;
 
   return {
     characters,
