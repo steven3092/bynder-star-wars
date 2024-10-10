@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { describe, it, expect, vitest } from "vitest";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
-import { GenericCharacter } from "./generic-character";
+import { Character } from "./character";
 import { CharactersDTO } from "../../interfaces/characters.dto";
 import { PlanetDTO } from "../../interfaces/planet.dto";
 
@@ -26,7 +26,6 @@ const mockCharacter: CharactersDTO = {
 };
 const mockIsError = vitest.fn().mockReturnValue(false);
 const mockIsLoading = vitest.fn().mockReturnValue(false);
-const mockHandleOnClickCharacter = vitest.fn();
 
 const mockPlanet: PlanetDTO = {
   climate: "arid",
@@ -87,25 +86,13 @@ const customRender = (children: React.ReactNode) => {
 
 describe("Generic Character component", () => {
   it("renders the character information", () => {
-    customRender(
-      <GenericCharacter
-        character={mockCharacter}
-        planet={mockPlanet}
-        handleOnClickGenericCharacter={mockHandleOnClickCharacter}
-      />
-    );
+    customRender(<Character />);
 
     expect(screen.getByText(/Luke Skywalker/i)).toBeInTheDocument();
   });
 
   it("renders the planet information", () => {
-    customRender(
-      <GenericCharacter
-        character={mockCharacter}
-        planet={mockPlanet}
-        handleOnClickGenericCharacter={mockHandleOnClickCharacter}
-      />
-    );
+    customRender(<Character />);
 
     expect(screen.getByText(/Tatooine/i)).toBeInTheDocument();
   });
