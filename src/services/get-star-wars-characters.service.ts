@@ -1,4 +1,12 @@
 export async function fetchStarWarsCharacters() {
+  if (import.meta.env.VITE_USE_MOCKS_SERVICE_WORKER === "true") {
+    const response = await fetch("https://swapi.dev/api/people/");
+    const data = await response.json();
+
+    const characters = data.results;
+
+    return characters;
+  }
   const urls = [
     "https://swapi.dev/api/people/",
     "https://swapi.dev/api/people/?page=2",
